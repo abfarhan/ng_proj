@@ -1,0 +1,25 @@
+<img class="converter" src="../../assets/printing.svg" alt="converter">
+<h1>Currency Calculator</h1>
+<p>Choose the currency and the amound to get the exchange rate</p>
+<div class="container">
+    <div class="currency">
+        <select [(ngModel)]="selectedCountryOne" (change)="calculate()">
+            <option *ngFor="let item of countryCurrency">{{item}}</option>
+        </select>
+        <input type="number" placeholder="0" [(ngModel)]="amounOne" (input)="calculate()" />
+    </div>
+
+    <div class="swap-rate-container">
+        <button class="btn" (click)="onSwapClick()">
+            Swap <img src="../../assets/swap.svg" alt="">
+        </button>
+        <div class="rate">{{RateText}}</div>
+    </div>
+
+    <div class="currency">
+        <select [(ngModel)]="selectedCountryTwo" (change)="calculate()">
+            <option *ngFor="let item of countryCurrency">{{item}}</option>
+        </select>
+        <input type="number" placeholder="0" [(ngModel)]="amountTwo" (input)="calculate()" />
+    </div>
+</div>

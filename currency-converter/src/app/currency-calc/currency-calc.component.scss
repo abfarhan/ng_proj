@@ -1,0 +1,94 @@
+
+$base-color: #6C63FF;
+
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+  color: $base-color;
+}
+
+p {
+  text-align: center;
+}
+
+.btn {
+  color: #fff;
+  background-color: $base-color;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  font-size: 17px;
+  font-weight: bold;
+  width: 100px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.converter {
+  width: 350px;
+}
+
+.currency {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  select {
+    cursor: pointer;
+    padding: 10px 20px 10px 10px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid #dedede;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100px;
+    background: #fff;
+    background-image: url(../../assets/arrow_down.svg);
+    background-position: right 10px top 50%, 0, 0;
+    background-size: 30px auto, 100%;
+    background-repeat: no-repeat;
+  }
+
+  input {
+    border: 0;
+    background: transparent;
+    font-size: 30px;
+    text-align: right;
+    margin-left: 10px;
+  }
+}
+
+.swap-rate-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .rate {
+    color: $base-color;
+    font-size: 16px;
+    padding: 0 10px;
+  }
+}
+
+
+
+select:focus,
+input:focus,
+button:focus {
+  outline: 0;
+}
+
+@media (max-width: 600px) {
+  .currency input {
+    width: 200px;
+  }
+}
