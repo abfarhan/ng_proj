@@ -1,0 +1,24 @@
+<div class="music-container">
+    <div class="music-container-top">
+        <img src="../../assets/ukulele.jpg" alt="poster" class="poster">
+        <h3 class="title">{{title}}</h3>
+        <audio src="../../assets/ukulele.mp3" class="audio" (ended)="onNextBtnCLick()"
+            (timeupdate)="updateProgress($event)" #audio></audio>
+    </div>
+    <div class="music-container-bottom">
+        <div class="progress-container" (click)="setProgress($event)" #progressCOntainer>
+            <div class="progress" [ngStyle]="{'width':cWidth}"></div>
+        </div>
+        <div class="btn-group">
+            <button class="btn-prev btn" (click)="onPrevBtnCLick()"><span class="material-icons">
+                    skip_previous
+                </span></button>
+            <button class="btn-play btn" (click)="onPlayBtnCLick()"><span class="material-icons">
+                    {{playPause}}
+                </span></button>
+            <button class="btn-next btn" (click)="onNextBtnCLick()"><span class="material-icons">
+                    skip_next
+                </span></button>
+        </div>
+    </div>
+</div>
